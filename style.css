@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|PT+Mono&display=swap");
+
+html {
+  height: 100%;
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+body {
+  margin: 8px;
+  min-height: calc(100vh - 16px); /* allow for footer without scrolling */
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+main,
+footer {
+  max-width: 90ch;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 8rem);
+}
+
+main.narrow-column {
+  max-width: 72ch;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+a {
+  color: #679267;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+}
+
+a:hover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 3rem;
+  font-size: 12px;
+}
